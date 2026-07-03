@@ -382,19 +382,6 @@ Rupamjyoti Ray is recognized for his contributions to educational technology and
 
 <style>
 .gallery-section{
-    width:100%;
-    padding:20px 10px;
-    background:#fff;
-    text-align:center;
-}
-
-.gallery-title{
-    font-size:18px;
-    font-weight:600;
-    color:#222;
-    margin-bottom:12px;
-}
-
 .gallery-slider{
     width:100%;
     overflow:hidden;
@@ -402,46 +389,22 @@ Rupamjyoti Ray is recognized for his contributions to educational technology and
 
 .gallery-track{
     display:flex;
-    width:max-content;
-    animation:slide 18s linear infinite;
+    gap:8px;
+    animation:slide 20s linear infinite;
 }
 
 .gallery-track img{
-    width:110px;
-    height:70px;
-    margin:4px;
-    border-radius:8px;
+    width:120px;
+    height:80px;
     object-fit:cover;
-    box-shadow:0 2px 6px rgba(0,0,0,.15);
+    border-radius:8px;
     flex-shrink:0;
-    transition:.3s;
 }
 
-.gallery-track img:hover{
-    transform:scale(1.05);
-}
-
-.gallery-slider:hover .gallery-track{
-    animation-play-state:paused;
-}
-
-@keyframes slide{
-    from{
-        transform:translateX(0);
-    }
-    to{
-        transform:translateX(-50%);
-    }
-}
-
-@media(min-width:768px){
-    .gallery-title{
-        font-size:24px;
-    }
-
+@media(max-width:600px){
     .gallery-track img{
-        width:170px;
-        height:110px;
+        width:100px;
+        height:65px;
     }
 }
 </style>
