@@ -72,6 +72,7 @@ th,td{
     border-top:1px solid #eaecf0;
     text-align:left;
     vertical-align:top;
+    word-break: break-word;
 }
 
 th{
@@ -123,6 +124,7 @@ a:hover{
     text-decoration:underline;
 }
 
+/* Tablet and Desktop scaling */
 @media(max-width:900px){
     .container{
         grid-template-columns:1fr;
@@ -130,6 +132,54 @@ a:hover{
     .infobox{
         position:relative;
         top:0;
+    }
+}
+
+/* Mobile Friendly Adjustments */
+@media(max-width:600px){
+    body {
+        font-size: 15px;
+    }
+    
+    .header{
+        font-size:22px;
+        padding:10px;
+    }
+
+    .container{
+        width:100%;
+        margin:0 auto;
+        gap:10px;
+    }
+
+    .infobox{
+        border-left:none;
+        border-right:none;
+    }
+    
+    th,td{
+        padding:8px 5px;
+        font-size:14px;
+    }
+
+    .content{
+        padding:15px;
+        border-left:none;
+        border-right:none;
+    }
+
+    .content h1{
+        font-size:28px;
+    }
+
+    .content h2{
+        font-size:22px;
+        margin-top:25px;
+    }
+    
+    .footer {
+        padding: 15px;
+        font-size: 13px;
     }
 }
 </style>
@@ -226,7 +276,7 @@ helpfromlatestonlineapply@yahoo.com
 <tr>
 <th>WhatsApp</th>
 <td>
-<a href="https://wa.me/918403837" target="_blank">
+<a href="https://wa.me/918403837134" target="_blank">
 Message Latest Online Apply
 </a>
 </td>
