@@ -371,6 +371,94 @@ Rupamjyoti Ray is recognized for his contributions to educational technology and
 </p>
 
 </div>
+<!-- ===== Gallery Section ===== -->
+<section id="gallery" class="gallery-section">
+    <h2 class="gallery-title">📸 Photo Gallery</h2>
+
+    <div class="gallery-slider">
+        <div class="gallery-track" id="galleryTrack"></div>
+    </div>
+</section>
+
+<style>
+.gallery-section{
+    width:100%;
+    padding:30px 15px;
+    background:#fff;
+    text-align:center;
+}
+
+.gallery-title{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:18px;
+    color:#222;
+}
+
+.gallery-slider{
+    overflow:hidden;
+    width:100%;
+}
+
+.gallery-track{
+    display:flex;
+    width:max-content;
+    animation:slide 22s linear infinite;
+}
+
+.gallery-track img{
+    width:170px;
+    height:110px;
+    margin:6px;
+    border-radius:10px;
+    object-fit:cover;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.gallery-track img:hover{
+    transform:scale(1.05);
+}
+
+.gallery-slider:hover .gallery-track{
+    animation-play-state:paused;
+}
+
+@keyframes slide{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+}
+
+@media(max-width:768px){
+.gallery-track img{
+    width:130px;
+    height:85px;
+}
+.gallery-title{
+    font-size:20px;
+}
+}
+</style>
+
+<script>
+const images = [
+"https://your-image-1.jpg",
+"https://your-image-2.jpg",
+"https://your-image-3.jpg",
+"https://your-image-4.jpg",
+"https://your-image-5.jpg"
+];
+
+const track=document.getElementById("galleryTrack");
+
+images.concat(images).forEach(src=>{
+    track.innerHTML+=`
+        <img src="${src}" alt="Gallery Image" loading="lazy">
+    `;
+});
+</script>
+<!-- ===== End Gallery Section ===== -->
+    
 <!-- Public Notices -->
 <div class="footer-notices">
     <h3>📢 Public Notices</h3>
