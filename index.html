@@ -358,24 +358,16 @@ Rupamjyoti Ray is recognized for his contributions to educational technology and
 
 <!-- JAVASCRIPT FOR RIGHT CLICK DISABLE & ALERT -->
 <script>
-    document.addEventListener('contextmenu', function(event) {
-        // Prevent the default right-click context menu
-        event.preventDefault(); 
-        
-        // Create and play a short beep sound
-        var alertSound = new Audio('https://actions.google.com/sounds/v1/alarms/beep_short.ogg');
-        alertSound.play().catch(function(error) {
-            console.log("Audio playback was prevented by the browser.");
-        });
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
 
-        // Set a slight delay before showing the alert so the sound has time to start playing
-        setTimeout(function() {
-            alert("⚠️ Copying is not allowed bro.
-"Content is protected 😂🤣😂👋👋.");
-        }, 50);
-    });
+    // Beep sound
+    const audio = new Audio("https://actions.google.com/sounds/v1/alarms/beep_short.ogg");
+    audio.play();
+
+    alert("⚠️ Right Click is Disabled!");
+});
 </script>
-
 </body>
     </html>
     
