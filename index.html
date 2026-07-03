@@ -356,5 +356,24 @@ Rupamjyoti Ray is recognized for his contributions to educational technology and
 © 2026 Rupamjyoti Ray • Biography • Encyclopedia Style
 </div>
 
+<!-- JAVASCRIPT FOR RIGHT CLICK DISABLE & ALERT -->
+<script>
+    document.addEventListener('contextmenu', function(event) {
+        // Prevent the default right-click context menu
+        event.preventDefault(); 
+        
+        // Create and play a short beep sound
+        var alertSound = new Audio('https://actions.google.com/sounds/v1/alarms/beep_short.ogg');
+        alertSound.play().catch(function(error) {
+            console.log("Audio playback was prevented by the browser.");
+        });
+
+        // Set a slight delay before showing the alert so the sound has time to start playing
+        setTimeout(function() {
+            alert("⚠️ Copying is not allowed.Content is protected.");
+        }, 50);
+    });
+</script>
+
 </body>
 </html>
