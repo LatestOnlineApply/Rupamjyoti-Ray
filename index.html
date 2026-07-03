@@ -433,6 +433,85 @@ document.addEventListener("contextmenu", function(e){
     alert("⚠️ Right Click is Disabled!");
 });
 </script>
+    <!-- Public Notices -->
+<div class="footer-notices">
+    <h3>📢 Public Notices</h3>
+
+    <marquee direction="up" scrollamount="2" height="160"
+        onmouseover="this.stop();"
+        onmouseout="this.start();">
+
+        <p>
+            <span class="notice-date">03 Jul 2026 | 12:30 PM</span><br>
+            📄 <a href="/notices/biography-update.pdf" target="_blank">
+                Official Biography Updated
+            </a>
+        </p>
+
+        <p>
+            <span class="notice-date">02 Jul 2026 | 09:15 AM</span><br>
+            🏆 <a href="/achievements.html">
+                Awards & Achievements Published
+            </a>
+        </p>
+
+        <p>
+            <span class="notice-date">01 Jul 2026 | 06:45 PM</span><br>
+            📰 <a href="/news.html">
+                Latest News & Announcements
+            </a>
+        </p>
+
+        <p>
+            <span class="notice-date">28 Jun 2026 | 10:00 AM</span><br>
+            ⚠️ <a href="/public-notice.html">
+                Public Advisory: Beware of Fake Social Media Accounts
+            </a>
+        </p>
+
+    </marquee>
+</div>
+
+<style>
+.footer-notices{
+    background:#0d1b2a;
+    color:#fff;
+    padding:20px;
+    border-top:3px solid #ffc107;
+}
+
+.footer-notices h3{
+    color:#ffc107;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.footer-notices p{
+    padding:10px;
+    margin-bottom:10px;
+    border-left:4px solid #ffc107;
+    background:rgba(255,255,255,.05);
+    border-radius:6px;
+}
+
+.notice-date{
+    display:inline-block;
+    color:#ffc107;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+.footer-notices a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.footer-notices a:hover{
+    color:#ffc107;
+    text-decoration:underline;
+}
+                            </style>
 </body>
     </html>
     
