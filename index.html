@@ -512,7 +512,94 @@ document.addEventListener("contextmenu", function(e){
     alert("⚠️ Right Click is Disabled!");
 });
 </script>
-    
+    <!-- ===== Auto Sliding Gallery (All Images) ===== -->
+<section class="gallery-section">
+    <h2 class="gallery-title">📸 Gallery</h2>
+
+    <div class="gallery-slider">
+        <div class="gallery-track" id="galleryTrack"></div>
+    </div>
+</section>
+
+<style>
+.gallery-section{
+    padding:15px 10px;
+    background:#fff;
+    text-align:center;
+}
+
+.gallery-title{
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:10px;
+    color:#222;
+}
+
+.gallery-slider{
+    width:100%;
+    overflow:hidden;
+}
+
+.gallery-track{
+    display:flex;
+    gap:6px;
+    width:max-content;
+    animation:scroll 20s linear infinite;
+}
+
+.gallery-track img{
+    width:100px;
+    height:65px;
+    object-fit:cover;
+    border-radius:8px;
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
+    flex-shrink:0;
+}
+
+.gallery-slider:hover .gallery-track{
+    animation-play-state:paused;
+}
+
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+@media (min-width:768px){
+    .gallery-track img{
+        width:140px;
+        height:90px;
+    }
+}
+</style>
+
+<script>
+const images = [
+"https://your-image-1.jpg",
+"https://your-image-2.jpg",
+"https://your-image-3.jpg",
+"https://your-image-4.jpg",
+"https://your-image-5.jpg",
+"https://your-image-6.jpg",
+"https://your-image-7.jpg",
+"https://your-image-8.jpg"
+];
+
+const track = document.getElementById("galleryTrack");
+
+// Duplicate images for seamless infinite scrolling
+[...images, ...images].forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = "Gallery";
+    img.loading = "lazy";
+    track.appendChild(img);
+});
+</script>
 </body>
     </html>
     
