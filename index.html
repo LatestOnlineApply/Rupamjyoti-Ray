@@ -371,62 +371,6 @@ Rupamjyoti Ray is recognized for his contributions to educational technology and
 </p>
 
 </div>
-<!-- ===== Mobile Friendly Gallery Section ===== -->
-<section id="gallery" class="gallery-section">
-    <h2 class="gallery-title">📸 Gallery</h2>
-
-    <div class="gallery-slider">
-        <div class="gallery-track" id="galleryTrack"></div>
-    </div>
-</section>
-
-<style>
-.gallery-section{
-.gallery-slider{
-    width:100%;
-    overflow:hidden;
-}
-
-.gallery-track{
-    display:flex;
-    gap:8px;
-    animation:slide 20s linear infinite;
-}
-
-.gallery-track img{
-    width:120px;
-    height:80px;
-    object-fit:cover;
-    border-radius:8px;
-    flex-shrink:0;
-}
-
-@media(max-width:600px){
-    .gallery-track img{
-        width:100px;
-        height:65px;
-    }
-}
-</style>
-
-<script>
-const images = [
-"https://your-image-1.jpg",
-"https://your-image-2.jpg",
-"https://your-image-3.jpg",
-"https://your-image-4.jpg",
-"https://your-image-5.jpg"
-];
-
-const track = document.getElementById("galleryTrack");
-
-images.concat(images).forEach(src => {
-    track.innerHTML += `
-        <img src="${src}" alt="Gallery Image" loading="lazy">
-    `;
-});
-</script>
-<!-- ===== End Gallery Section ===== -->
     
 <!-- Public Notices -->
 <div class="footer-notices">
