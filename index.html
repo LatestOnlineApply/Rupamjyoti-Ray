@@ -371,9 +371,9 @@ Rupamjyoti Ray is recognized for his contributions to educational technology and
 </p>
 
 </div>
-<!-- ===== Gallery Section ===== -->
+<!-- ===== Mobile Friendly Gallery Section ===== -->
 <section id="gallery" class="gallery-section">
-    <h2 class="gallery-title">📸 Photo Gallery</h2>
+    <h2 class="gallery-title">📸 Gallery</h2>
 
     <div class="gallery-slider">
         <div class="gallery-track" id="galleryTrack"></div>
@@ -383,36 +383,37 @@ Rupamjyoti Ray is recognized for his contributions to educational technology and
 <style>
 .gallery-section{
     width:100%;
-    padding:30px 15px;
+    padding:20px 10px;
     background:#fff;
     text-align:center;
 }
 
 .gallery-title{
-    font-size:24px;
-    font-weight:bold;
-    margin-bottom:18px;
+    font-size:18px;
+    font-weight:600;
     color:#222;
+    margin-bottom:12px;
 }
 
 .gallery-slider{
-    overflow:hidden;
     width:100%;
+    overflow:hidden;
 }
 
 .gallery-track{
     display:flex;
     width:max-content;
-    animation:slide 22s linear infinite;
+    animation:slide 18s linear infinite;
 }
 
 .gallery-track img{
-    width:170px;
-    height:110px;
-    margin:6px;
-    border-radius:10px;
+    width:110px;
+    height:70px;
+    margin:4px;
+    border-radius:8px;
     object-fit:cover;
-    box-shadow:0 3px 10px rgba(0,0,0,.15);
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
+    flex-shrink:0;
     transition:.3s;
 }
 
@@ -425,18 +426,23 @@ Rupamjyoti Ray is recognized for his contributions to educational technology and
 }
 
 @keyframes slide{
-    from{transform:translateX(0);}
-    to{transform:translateX(-50%);}
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
 }
 
-@media(max-width:768px){
-.gallery-track img{
-    width:130px;
-    height:85px;
-}
-.gallery-title{
-    font-size:20px;
-}
+@media(min-width:768px){
+    .gallery-title{
+        font-size:24px;
+    }
+
+    .gallery-track img{
+        width:170px;
+        height:110px;
+    }
 }
 </style>
 
@@ -449,10 +455,10 @@ const images = [
 "https://your-image-5.jpg"
 ];
 
-const track=document.getElementById("galleryTrack");
+const track = document.getElementById("galleryTrack");
 
-images.concat(images).forEach(src=>{
-    track.innerHTML+=`
+images.concat(images).forEach(src => {
+    track.innerHTML += `
         <img src="${src}" alt="Gallery Image" loading="lazy">
     `;
 });
